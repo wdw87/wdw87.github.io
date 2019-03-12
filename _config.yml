@@ -81,21 +81,21 @@ deploy:
   type: git
   repo: https://github.com/wdw87/wdw87.github.io.git
   branch: master
-jsonContent:
+  jsonContent:
     meta: false
     pages: false
     posts:
-    title: true
-    date: true
-    path: true
-    text: false
-    raw: false
-    content: false
-    slug: false
-    updated: false
-    comments: false
-    link: false
-    permalink: false
-    excerpt: false
-    categories: false
-    tags: true
+      title: true
+      date: true
+      path: true
+      text: false
+      raw: false
+      content: false
+      slug: false
+      updated: false
+      comments: false
+      link: false
+      permalink: false
+      excerpt: false
+      categories: false
+      tags: true
