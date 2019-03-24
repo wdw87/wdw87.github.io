@@ -26,7 +26,7 @@ class RAM{    }
 class Disk{    }
 ```
 
-
+<!--more-->
 
 ### 7.2 继承
 
