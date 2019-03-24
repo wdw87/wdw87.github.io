@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="wdw87的博客">
 <meta property="og:description" content="7.复用类7.1 组合 在类中new另外一个对象，以添加该对象的属性  12345678910public class Computer &amp;#123;    public Computer() &amp;#123;        CPU cpu=new CPU();        RAM ram=new RAM();        Disk disk=new Disk();    &amp;#125;&amp;#125;">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-24T03:36:43.935Z">
+<meta property="og:updated_time" content="2019-03-24T03:45:06.104Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[ThinkingInJava]复用类">
 <meta name="twitter:description" content="7.复用类7.1 组合 在类中new另外一个对象，以添加该对象的属性  12345678910public class Computer &amp;#123;    public Computer() &amp;#123;        CPU cpu=new CPU();        RAM ram=new RAM();        Disk disk=new Disk();    &amp;#125;&amp;#125;">
@@ -173,6 +173,7 @@
 <p>在类中new另外一个对象，以添加该对象的属性</p>
 </blockquote>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Computer</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Computer</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        CPU cpu=<span class="keyword">new</span> CPU();</span><br><span class="line">        RAM ram=<span class="keyword">new</span> RAM();</span><br><span class="line">        Disk disk=<span class="keyword">new</span> Disk();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CPU</span></span>&#123;    &#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">RAM</span></span>&#123;    &#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Disk</span></span>&#123;    &#125;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <h3 id="7-2-继承"><a href="#7-2-继承" class="headerlink" title="7.2 继承"></a>7.2 继承</h3><blockquote>
 <p>从基类继承得到子类，得到该基类的特性</p>
 </blockquote>
