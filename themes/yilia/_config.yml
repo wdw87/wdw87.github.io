@@ -1,9 +1,13 @@
 # Header
 
+#menu:
+#  主页: /
+#  随笔: /tags/随笔/
+#  数据结构与算法: /tags/数据结构与算法/
 menu:
-  主页: /
-  随笔: /tags/随笔/
-  数据结构与算法: /tags/数据结构与算法/
+  主页: /      
+  文章: /archives   
+                
 
 # SubNav
 subnav:
