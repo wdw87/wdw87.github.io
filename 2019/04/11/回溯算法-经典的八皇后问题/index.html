@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://www.wdw87.club">
-  <title>[ThinkingInJava]多态 | wdw87的博客</title>
+  <title>[回溯算法]经典的八皇后问题 | wdw87的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="8. 多态8.1 绑定 将一个方法调用同一个方法主体关联起来被称为绑定   前期绑定：在程序执行前进行绑定 后期绑定（动态绑定）：在运行时根据对象的类型进行绑定  Java中除了static方法和final方法（private方法属于final）之外，其他方法都是动态绑定 8.1.1 缺陷：“覆盖私有方法” 只有非private方法才能够被覆盖 基类中的private方法对于导出类既不可见，也不能">
-<meta name="keywords" content="Java基础,笔记,Thinking in Java">
+  <meta name="description" content="[回溯算法]以八皇后问题和括号生成问题为例 回溯算法的本质是一种枚举，它从解决问题的所有可能选项里系统的选出一个可执行的解决方案  1. 回溯法适合解决什么问题？回溯法非常适合解决由多个步骤组成的问题，并且每一个步骤有多个选项。当我们选择了其中一个选项是，就进入下一步，然后面临新的选项，重复选择，直至解决问题。一般采用递归。例如八皇后问题和LeetCode括号生成 2. 回溯法的关键步骤 选择：构">
+<meta name="keywords" content="数据结构与算法,回溯法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[ThinkingInJava]多态">
-<meta property="og:url" content="http://www.wdw87.club/2019/03/26/ThinkingInJava-多态/index.html">
+<meta property="og:title" content="[回溯算法]经典的八皇后问题">
+<meta property="og:url" content="http://www.wdw87.club/2019/04/11/回溯算法-经典的八皇后问题/index.html">
 <meta property="og:site_name" content="wdw87的博客">
-<meta property="og:description" content="8. 多态8.1 绑定 将一个方法调用同一个方法主体关联起来被称为绑定   前期绑定：在程序执行前进行绑定 后期绑定（动态绑定）：在运行时根据对象的类型进行绑定  Java中除了static方法和final方法（private方法属于final）之外，其他方法都是动态绑定 8.1.1 缺陷：“覆盖私有方法” 只有非private方法才能够被覆盖 基类中的private方法对于导出类既不可见，也不能">
+<meta property="og:description" content="[回溯算法]以八皇后问题和括号生成问题为例 回溯算法的本质是一种枚举，它从解决问题的所有可能选项里系统的选出一个可执行的解决方案  1. 回溯法适合解决什么问题？回溯法非常适合解决由多个步骤组成的问题，并且每一个步骤有多个选项。当我们选择了其中一个选项是，就进入下一步，然后面临新的选项，重复选择，直至解决问题。一般采用递归。例如八皇后问题和LeetCode括号生成 2. 回溯法的关键步骤 选择：构">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-26T08:27:37.776Z">
+<meta property="og:updated_time" content="2019-04-30T06:29:41.212Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="[ThinkingInJava]多态">
-<meta name="twitter:description" content="8. 多态8.1 绑定 将一个方法调用同一个方法主体关联起来被称为绑定   前期绑定：在程序执行前进行绑定 后期绑定（动态绑定）：在运行时根据对象的类型进行绑定  Java中除了static方法和final方法（private方法属于final）之外，其他方法都是动态绑定 8.1.1 缺陷：“覆盖私有方法” 只有非private方法才能够被覆盖 基类中的private方法对于导出类既不可见，也不能">
+<meta name="twitter:title" content="[回溯算法]经典的八皇后问题">
+<meta name="twitter:description" content="[回溯算法]以八皇后问题和括号生成问题为例 回溯算法的本质是一种枚举，它从解决问题的所有可能选项里系统的选出一个可执行的解决方案  1. 回溯法适合解决什么问题？回溯法非常适合解决由多个步骤组成的问题，并且每一个步骤有多个选项。当我们选择了其中一个选项是，就进入下一步，然后面临新的选项，重复选择，直至解决问题。一般采用递归。例如八皇后问题和LeetCode括号生成 2. 回溯法的关键步骤 选择：构">
   
     <link rel="alternative" href="/atom.xml" title="wdw87的博客" type="application/atom+xml">
   
@@ -143,69 +143,57 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-ThinkingInJava-多态" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-回溯算法-经典的八皇后问题" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      [ThinkingInJava]多态
+      [回溯算法]经典的八皇后问题
     </h1>
   
 
         
-        <a href="/2019/03/26/ThinkingInJava-多态/" class="archive-article-date">
-  	<time datetime="2019-03-26T08:26:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-26</time>
+        <a href="/2019/04/11/回溯算法-经典的八皇后问题/" class="archive-article-date">
+  	<time datetime="2019-04-11T12:46:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-11</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="8-多态"><a href="#8-多态" class="headerlink" title="8. 多态"></a>8. 多态</h2><h3 id="8-1-绑定"><a href="#8-1-绑定" class="headerlink" title="8.1 绑定"></a>8.1 绑定</h3><blockquote>
-<p>将一个<strong>方法调用</strong>同一个<strong>方法主体</strong>关联起来被称为绑定</p>
+        <h2 id="回溯算法-以八皇后问题和括号生成问题为例"><a href="#回溯算法-以八皇后问题和括号生成问题为例" class="headerlink" title="[回溯算法]以八皇后问题和括号生成问题为例"></a>[回溯算法]以八皇后问题和括号生成问题为例</h2><blockquote>
+<p>回溯算法的本质是一种枚举，它从解决问题的所有可能选项里系统的选出一个可执行的解决方案</p>
 </blockquote>
-<blockquote>
-<p>前期绑定：在程序执行前进行绑定</p>
-<p>后期绑定（动态绑定）：在运行时根据对象的类型进行绑定</p>
-</blockquote>
-<p>Java中除了static方法和final方法<strong>（private方法属于final）</strong>之外，其他方法都是动态绑定</p>
-<h4 id="8-1-1-缺陷：“覆盖私有方法”"><a href="#8-1-1-缺陷：“覆盖私有方法”" class="headerlink" title="8.1.1 缺陷：“覆盖私有方法”"></a>8.1.1 缺陷：“覆盖私有方法”</h4><ul>
-<li>只有非<strong>private</strong>方法才能够被覆盖</li>
-<li>基类中的private方法对于导出类既不可见，也不能重载</li>
+<h4 id="1-回溯法适合解决什么问题？"><a href="#1-回溯法适合解决什么问题？" class="headerlink" title="1. 回溯法适合解决什么问题？"></a>1. 回溯法适合解决什么问题？</h4><p>回溯法非常适合解决由<strong>多个步骤组成</strong>的问题，并且每一个步骤有多个选项。当我们选择了其中一个选项是，就进入下一步，然后面临新的选项，重复选择，直至解决问题。一般采用递归。例如八皇后问题和LeetCode括号生成</p>
+<h4 id="2-回溯法的关键步骤"><a href="#2-回溯法的关键步骤" class="headerlink" title="2. 回溯法的关键步骤"></a>2. 回溯法的关键步骤</h4><ul>
+<li>选择：构建算法的第一步，第一步选择往往由有限个选择开始，一般由多个if或for循环实现</li>
+<li>条件：对于每一步选择，必须满足特定条件，否则回溯</li>
+<li>结束：当满足特定条件时，得出一个正确结果，把解存储下来或者打印出来。有时还需要构建一个数据结构，把解存储起来，这个数据结构必须是全局的，作为参数之一传递给递归函数</li>
 </ul>
+<p><strong>注意：上述三个步骤在实现时，有时实现顺序与上述不同，有时选择和条件会混在一起</strong></p>
 <a id="more"></a>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PrivateOverride</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">f</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"private f()"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		PrivateOverride po = <span class="keyword">new</span> Derived();</span><br><span class="line">		po.f();</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Derived</span> <span class="keyword">extends</span> <span class="title">PrivateOverride</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">f</span><span class="params">()</span> </span>&#123;    <span class="comment">//此处没有发生覆盖，基类中的private方法既不可见，也不能重载</span></span><br><span class="line">		System.out.println(<span class="string">"public f()"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">sout:</span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="title">f</span><span class="params">()</span></span></span><br></pre></td></tr></table></figure>
-<h4 id="8-1-2缺陷：域与静态方法"><a href="#8-1-2缺陷：域与静态方法" class="headerlink" title="8.1.2缺陷：域与静态方法"></a>8.1.2缺陷：域与静态方法</h4><ul>
-<li>只有普通方法的调用可以是多态的</li>
-<li>静态方法没有多态</li>
-<li>域的访问在编译期进行解析，不会发生多态</li>
+<h4 id="3-实例分析1：八皇问题"><a href="#3-实例分析1：八皇问题" class="headerlink" title="3.实例分析1：八皇问题"></a>3.实例分析1：八皇问题</h4><h5 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h5><p>从第一行摆棋子，然后摆第二行….直到最后一行，每摆一个棋子检查是否冲突，冲突则回溯</p>
+<h5 id="三个步骤："><a href="#三个步骤：" class="headerlink" title="三个步骤："></a>三个步骤：</h5><ul>
+<li>选择：第一步可选的位置有八个,如*号所示位置，对于每一个选择，都会面临着多个后续选择</li>
 </ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Car</span></span>&#123;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">int</span> id = <span class="number">0</span>;</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">getId</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> id;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BenzCar</span> <span class="keyword">extends</span> <span class="title">Car</span></span>&#123;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">int</span> id = <span class="number">1</span>;</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">getId</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> id;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Car benzCar = <span class="keyword">new</span> BenzCar();</span><br><span class="line">		System.out.println(benzCar.id);  <span class="comment">//域不会发生多态</span></span><br><span class="line">		System.out.println(benzCar.getId());</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">sout：</span><br><span class="line"><span class="number">0</span></span><br><span class="line"><span class="number">1</span></span><br></pre></td></tr></table></figure>
-<h3 id="8-2-构造器和多态"><a href="#8-2-构造器和多态" class="headerlink" title="8.2 构造器和多态"></a>8.2 构造器和多态</h3><h4 id="8-2-1-构造器的调用顺序"><a href="#8-2-1-构造器的调用顺序" class="headerlink" title="8.2.1 构造器的调用顺序"></a>8.2.1 构造器的调用顺序</h4><ul>
-<li>构造器实际上是static方法，只不过是隐式声明的</li>
-<li>构造器不具有多态</li>
-<li>基类构造器总是在导出类构造器之前调用，因为构造器需要检查对象是否正确的被调用，导出类只能访问自己的成员，只有<strong>构造器才有权限对自己的元素进行初始化</strong></li>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    1 2 3 4 5 6 7 8</span></span><br><span class="line"><span class="comment">1 |*|*|*|*|*|*|*|*|</span></span><br><span class="line"><span class="comment">2 | | | | | | | | |</span></span><br><span class="line"><span class="comment">3 | | | | | | | | |</span></span><br><span class="line"><span class="comment">4 | | | | | | | | |</span></span><br><span class="line"><span class="comment">5 | | | | | | | | |</span></span><br><span class="line"><span class="comment">6 | | | | | | | | |</span></span><br><span class="line"><span class="comment">7 | | | | | | | | |</span></span><br><span class="line"><span class="comment">8 | | | | | | | | |</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>条件：如果接下来要放的棋子，与之前所放的棋子发生冲突，则回溯</li>
+<li>结束：如果递归执行到了第8次，即每一行都放上了棋子（不发生冲突）则得到一个正确结果</li>
 </ul>
-<h4 id="8-2-2-继承与清理"><a href="#8-2-2-继承与清理" class="headerlink" title="8.2.2 继承与清理"></a>8.2.2 继承与清理</h4><ul>
-<li>如果需要手动清理对象，必须从导出类开始，直到基类</li>
+<h5 id="代码分析"><a href="#代码分析" class="headerlink" title="代码分析"></a>代码分析</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">EightQueen</span> </span>&#123;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span>[][] array = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">8</span>][<span class="number">8</span>];</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">findNext</span><span class="params">(<span class="keyword">int</span> row)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(row &gt;= <span class="number">8</span>) &#123; <span class="comment">//结束</span></span><br><span class="line">			printBoard();</span><br><span class="line">			res++;</span><br><span class="line">			<span class="keyword">return</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">8</span>;i++) &#123; <span class="comment">//选择</span></span><br><span class="line">			<span class="keyword">if</span>(check(row,i)) &#123; <span class="comment">//条件：冲突检查</span></span><br><span class="line">				array[row][i]= <span class="number">1</span>; </span><br><span class="line">				findNext(row+<span class="number">1</span>); <span class="comment">//满足条件，进行递归</span></span><br><span class="line">				array[row][i]= <span class="number">0</span>; <span class="comment">//避免回溯时的脏数据</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 冲突检查</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> row 行</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> col 列</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">check</span><span class="params">(<span class="keyword">int</span> row,<span class="keyword">int</span> col)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;row;i++) &#123;</span><br><span class="line">			<span class="keyword">if</span>(array[i][col] == <span class="number">1</span>) &#123;</span><br><span class="line">				<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=row-<span class="number">1</span>,j=col+<span class="number">1</span>;i&gt;=<span class="number">0</span> &amp;&amp; j&lt;<span class="number">8</span>;i--,j++) &#123;</span><br><span class="line">			<span class="keyword">if</span>(array[i][j] == <span class="number">1</span>) &#123;</span><br><span class="line">				<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=row-<span class="number">1</span>,j=col-<span class="number">1</span>;i&gt;=<span class="number">0</span> &amp;&amp; j&gt;=<span class="number">0</span>;i--,j--) &#123;</span><br><span class="line">			<span class="keyword">if</span>(array[i][j] == <span class="number">1</span>) &#123;</span><br><span class="line">				<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 打印棋盘</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">printBoard</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i&lt;<span class="number">8</span>;i++) &#123;</span><br><span class="line">			<span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>;j&lt;<span class="number">8</span>;j++) &#123;</span><br><span class="line">				System.out.print(array[i][j] + <span class="string">" "</span> );</span><br><span class="line">			&#125;</span><br><span class="line">			System.out.println();</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(<span class="string">"-----------------"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		findNext(<span class="number">0</span>);</span><br><span class="line">		System.out.println(res);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="4-实例分析1：括号生成"><a href="#4-实例分析1：括号生成" class="headerlink" title="4.实例分析1：括号生成"></a>4.实例分析1：括号生成</h4><p>给出 <em>n</em> 代表生成括号的对数，请你写出一个函数，使其能够生成所有可能的并且<strong>有效的</strong>括号组合。</p>
+<p>例如，给出 <em>n</em> = 3，生成结果为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">  &quot;((()))&quot;,</span><br><span class="line">  &quot;(()())&quot;,</span><br><span class="line">  &quot;(())()&quot;,</span><br><span class="line">  &quot;()(())&quot;,</span><br><span class="line">  &quot;()()()&quot;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<h5 id="思路：-1"><a href="#思路：-1" class="headerlink" title="思路："></a>思路：</h5><p>手里有n个  ‘ ( ‘ 和 n个 ‘ ) ‘ 然后不断往一个空字符串后边添加括号，全部括号都添加完毕，则得到正确结果</p>
+<h5 id="三个步骤：-1"><a href="#三个步骤：-1" class="headerlink" title="三个步骤："></a>三个步骤：</h5><ul>
+<li>选择：左括号没有全部添加，则继续添加</li>
+<li>条件：只有当剩余的右括号比左括号多时，才能添加右括号，否则括号不匹配</li>
+<li>结束：所有括号添加完毕，得到一个正确结果</li>
 </ul>
-<h4 id="8-2-3-构造器内部的多态方法的行为"><a href="#8-2-3-构造器内部的多态方法的行为" class="headerlink" title="8.2.3 构造器内部的多态方法的行为"></a>8.2.3 构造器内部的多态方法的行为</h4><ul>
-<li>初始化的实际顺序为：<ul>
-<li>为对象分配存储空间，存储空间1初始化为二进制0</li>
-<li>调用基类构造器</li>
-<li>按照声明的顺序调用成员的初始化方法</li>
-<li>调用导出类的构造器主体</li>
-</ul>
-</li>
-<li>如果在构造器中调用本对象的多态方法，方法仍然会发生多态，但这个方法所操作的成员<strong>可能还未初始化</strong></li>
-</ul>
-<h3 id="8-3-向下转型"><a href="#8-3-向下转型" class="headerlink" title="8.3 向下转型"></a>8.3 向下转型</h3><ul>
-<li>Java中所有的转型都会得到检查，如果转型不成功，则会抛出一个<strong>ClassCastExeception</strong>。</li>
-<li>这种在运行期间对类型进行检查的行为称为“<strong>运行时类型识别(RTTI)</strong>”</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Useful</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">f</span><span class="params">()</span> </span>&#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MoreUseful</span> <span class="keyword">extends</span> <span class="title">Useful</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">f</span><span class="params">()</span> </span>&#123;&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">u</span><span class="params">()</span> </span>&#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RTTI</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Useful[] x = &#123;</span><br><span class="line">				<span class="keyword">new</span> Useful(),</span><br><span class="line">				<span class="keyword">new</span> MoreUseful()</span><br><span class="line">		&#125;;</span><br><span class="line">		x[<span class="number">0</span>].f();</span><br><span class="line">		<span class="comment">//x[1].u();  ERROR!!! 由于向上转型，丢失了导出类特有的方法</span></span><br><span class="line">		((MoreUseful)x[<span class="number">1</span>]).u();  <span class="comment">//RTTI，向下转型</span></span><br><span class="line">		((MoreUseful)x[<span class="number">0</span>]).u();  <span class="comment">//运行时抛出异常java.lang.ClassCastException</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="代码分析："><a href="#代码分析：" class="headerlink" title="代码分析："></a>代码分析：</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;String&gt; <span class="title">generateParenthesis</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        List&lt;String&gt; res = <span class="keyword">new</span> ArrayList&lt;String&gt;(); <span class="comment">//全局变量用于存储结果</span></span><br><span class="line">        pailie(<span class="string">""</span>,res,n,n);<span class="comment">//存储结果的全局变量作为参数，传入递归！</span></span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">pailie</span><span class="params">(String subString,List&lt;String&gt; res,<span class="keyword">int</span> leftnum,<span class="keyword">int</span> rightnum)</span></span>&#123;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span>(leftnum == <span class="number">0</span> &amp;&amp; rightnum == <span class="number">0</span>)&#123; <span class="comment">//结束</span></span><br><span class="line">            res.add(subString);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(leftnum &gt; <span class="number">0</span>)&#123; <span class="comment">//选择和条件</span></span><br><span class="line">            pailie(subString + <span class="string">"("</span>,res,leftnum-<span class="number">1</span>,rightnum);<span class="comment">//递归</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//只有当剩余的右括号比左括号多时才能添加右括号</span></span><br><span class="line">        <span class="keyword">if</span>(rightnum &gt; leftnum)&#123; <span class="comment">//选择和条件</span></span><br><span class="line">            pailie(subString + <span class="string">")"</span>,res,leftnum,rightnum-<span class="number">1</span>);<span class="comment">//递归</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
 
@@ -240,15 +228,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Java基础</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">数据结构与算法</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Thinking in Java</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">回溯法</a>
         		</li>
       		
 		</ul>
@@ -304,7 +288,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://www.wdw87.club/2019/03/26/ThinkingInJava-多态/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://www.wdw87.club/2019/04/11/回溯算法-经典的八皇后问题/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -318,18 +302,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/03/27/数据库-C3P0简单使用/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          [数据库]C3P0简单使用
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/03/24/ThinkingInJava-复用类/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">[ThinkingInJava]复用类</div>
+    <a href="/2019/04/03/设计模式-Observer观察者模式/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">[设计模式]Observer观察者模式</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -368,7 +343,7 @@
 <script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "http://www.wdw87.club/2019/03/26/ThinkingInJava-多态/",
+  id: "http://www.wdw87.club/2019/04/11/回溯算法-经典的八皇后问题/",
   owner: 'wdw87',
   repo: 'wdw87Blog.github.io',
   oauth: {

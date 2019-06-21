@@ -6,20 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://www.wdw87.club">
-  <title>[ThinkingInJava]多态 | wdw87的博客</title>
+  <title>Tag: 数据库 | wdw87的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="8. 多态8.1 绑定 将一个方法调用同一个方法主体关联起来被称为绑定   前期绑定：在程序执行前进行绑定 后期绑定（动态绑定）：在运行时根据对象的类型进行绑定  Java中除了static方法和final方法（private方法属于final）之外，其他方法都是动态绑定 8.1.1 缺陷：“覆盖私有方法” 只有非private方法才能够被覆盖 基类中的private方法对于导出类既不可见，也不能">
-<meta name="keywords" content="Java基础,笔记,Thinking in Java">
-<meta property="og:type" content="article">
-<meta property="og:title" content="[ThinkingInJava]多态">
-<meta property="og:url" content="http://www.wdw87.club/2019/03/26/ThinkingInJava-多态/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="wdw87的博客">
+<meta property="og:url" content="http://www.wdw87.club/tags/数据库/index.html">
 <meta property="og:site_name" content="wdw87的博客">
-<meta property="og:description" content="8. 多态8.1 绑定 将一个方法调用同一个方法主体关联起来被称为绑定   前期绑定：在程序执行前进行绑定 后期绑定（动态绑定）：在运行时根据对象的类型进行绑定  Java中除了static方法和final方法（private方法属于final）之外，其他方法都是动态绑定 8.1.1 缺陷：“覆盖私有方法” 只有非private方法才能够被覆盖 基类中的private方法对于导出类既不可见，也不能">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-26T08:27:37.776Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="[ThinkingInJava]多态">
-<meta name="twitter:description" content="8. 多态8.1 绑定 将一个方法调用同一个方法主体关联起来被称为绑定   前期绑定：在程序执行前进行绑定 后期绑定（动态绑定）：在运行时根据对象的类型进行绑定  Java中除了static方法和final方法（private方法属于final）之外，其他方法都是动态绑定 8.1.1 缺陷：“覆盖私有方法” 只有非private方法才能够被覆盖 基类中的private方法对于导出类既不可见，也不能">
+<meta name="twitter:title" content="wdw87的博客">
   
     <link rel="alternative" href="/atom.xml" title="wdw87的博客" type="application/atom+xml">
   
@@ -143,242 +138,114 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-ThinkingInJava-多态" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      [ThinkingInJava]多态
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/03/27/C3P0-0-9-5-4与Mysql8-0-15版本连接的若干问题/" class="archive-article-date">
+  	<time datetime="2019-03-27T14:07:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-27</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/03/27/C3P0-0-9-5-4与Mysql8-0-15版本连接的若干问题/">C3P0-0.9.5.4与Mysql8.0.15版本连接的若干问题</a>
     </h1>
   
 
-        
-        <a href="/2019/03/26/ThinkingInJava-多态/" class="archive-article-date">
-  	<time datetime="2019-03-26T08:26:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="8-多态"><a href="#8-多态" class="headerlink" title="8. 多态"></a>8. 多态</h2><h3 id="8-1-绑定"><a href="#8-1-绑定" class="headerlink" title="8.1 绑定"></a>8.1 绑定</h3><blockquote>
-<p>将一个<strong>方法调用</strong>同一个<strong>方法主体</strong>关联起来被称为绑定</p>
-</blockquote>
-<blockquote>
-<p>前期绑定：在程序执行前进行绑定</p>
-<p>后期绑定（动态绑定）：在运行时根据对象的类型进行绑定</p>
-</blockquote>
-<p>Java中除了static方法和final方法<strong>（private方法属于final）</strong>之外，其他方法都是动态绑定</p>
-<h4 id="8-1-1-缺陷：“覆盖私有方法”"><a href="#8-1-1-缺陷：“覆盖私有方法”" class="headerlink" title="8.1.1 缺陷：“覆盖私有方法”"></a>8.1.1 缺陷：“覆盖私有方法”</h4><ul>
-<li>只有非<strong>private</strong>方法才能够被覆盖</li>
-<li>基类中的private方法对于导出类既不可见，也不能重载</li>
-</ul>
-<a id="more"></a>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PrivateOverride</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">f</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"private f()"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		PrivateOverride po = <span class="keyword">new</span> Derived();</span><br><span class="line">		po.f();</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Derived</span> <span class="keyword">extends</span> <span class="title">PrivateOverride</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">f</span><span class="params">()</span> </span>&#123;    <span class="comment">//此处没有发生覆盖，基类中的private方法既不可见，也不能重载</span></span><br><span class="line">		System.out.println(<span class="string">"public f()"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">sout:</span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="title">f</span><span class="params">()</span></span></span><br></pre></td></tr></table></figure>
-<h4 id="8-1-2缺陷：域与静态方法"><a href="#8-1-2缺陷：域与静态方法" class="headerlink" title="8.1.2缺陷：域与静态方法"></a>8.1.2缺陷：域与静态方法</h4><ul>
-<li>只有普通方法的调用可以是多态的</li>
-<li>静态方法没有多态</li>
-<li>域的访问在编译期进行解析，不会发生多态</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Car</span></span>&#123;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">int</span> id = <span class="number">0</span>;</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">getId</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> id;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BenzCar</span> <span class="keyword">extends</span> <span class="title">Car</span></span>&#123;</span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">int</span> id = <span class="number">1</span>;</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">getId</span><span class="params">()</span> </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> id;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Car benzCar = <span class="keyword">new</span> BenzCar();</span><br><span class="line">		System.out.println(benzCar.id);  <span class="comment">//域不会发生多态</span></span><br><span class="line">		System.out.println(benzCar.getId());</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">sout：</span><br><span class="line"><span class="number">0</span></span><br><span class="line"><span class="number">1</span></span><br></pre></td></tr></table></figure>
-<h3 id="8-2-构造器和多态"><a href="#8-2-构造器和多态" class="headerlink" title="8.2 构造器和多态"></a>8.2 构造器和多态</h3><h4 id="8-2-1-构造器的调用顺序"><a href="#8-2-1-构造器的调用顺序" class="headerlink" title="8.2.1 构造器的调用顺序"></a>8.2.1 构造器的调用顺序</h4><ul>
-<li>构造器实际上是static方法，只不过是隐式声明的</li>
-<li>构造器不具有多态</li>
-<li>基类构造器总是在导出类构造器之前调用，因为构造器需要检查对象是否正确的被调用，导出类只能访问自己的成员，只有<strong>构造器才有权限对自己的元素进行初始化</strong></li>
-</ul>
-<h4 id="8-2-2-继承与清理"><a href="#8-2-2-继承与清理" class="headerlink" title="8.2.2 继承与清理"></a>8.2.2 继承与清理</h4><ul>
-<li>如果需要手动清理对象，必须从导出类开始，直到基类</li>
-</ul>
-<h4 id="8-2-3-构造器内部的多态方法的行为"><a href="#8-2-3-构造器内部的多态方法的行为" class="headerlink" title="8.2.3 构造器内部的多态方法的行为"></a>8.2.3 构造器内部的多态方法的行为</h4><ul>
-<li>初始化的实际顺序为：<ul>
-<li>为对象分配存储空间，存储空间1初始化为二进制0</li>
-<li>调用基类构造器</li>
-<li>按照声明的顺序调用成员的初始化方法</li>
-<li>调用导出类的构造器主体</li>
-</ul>
-</li>
-<li>如果在构造器中调用本对象的多态方法，方法仍然会发生多态，但这个方法所操作的成员<strong>可能还未初始化</strong></li>
-</ul>
-<h3 id="8-3-向下转型"><a href="#8-3-向下转型" class="headerlink" title="8.3 向下转型"></a>8.3 向下转型</h3><ul>
-<li>Java中所有的转型都会得到检查，如果转型不成功，则会抛出一个<strong>ClassCastExeception</strong>。</li>
-<li>这种在运行期间对类型进行检查的行为称为“<strong>运行时类型识别(RTTI)</strong>”</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Useful</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">f</span><span class="params">()</span> </span>&#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MoreUseful</span> <span class="keyword">extends</span> <span class="title">Useful</span></span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">f</span><span class="params">()</span> </span>&#123;&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">u</span><span class="params">()</span> </span>&#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RTTI</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Useful[] x = &#123;</span><br><span class="line">				<span class="keyword">new</span> Useful(),</span><br><span class="line">				<span class="keyword">new</span> MoreUseful()</span><br><span class="line">		&#125;;</span><br><span class="line">		x[<span class="number">0</span>].f();</span><br><span class="line">		<span class="comment">//x[1].u();  ERROR!!! 由于向上转型，丢失了导出类特有的方法</span></span><br><span class="line">		((MoreUseful)x[<span class="number">1</span>]).u();  <span class="comment">//RTTI，向下转型</span></span><br><span class="line">		((MoreUseful)x[<span class="number">0</span>]).u();  <span class="comment">//运行时抛出异常java.lang.ClassCastException</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Java基础</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">数据库</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">c3p0</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Thinking in Java</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mysql</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://www.wdw87.club/2019/03/26/ThinkingInJava-多态/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
   
-<nav id="article-nav">
-  
-    <a href="/2019/03/27/数据库-C3P0简单使用/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          [数据库]C3P0简单使用
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2019/03/24/ThinkingInJava-复用类/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">[ThinkingInJava]复用类</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/03/27/数据库-C3P0简单使用/" class="archive-article-date">
+  	<time datetime="2019-03-27T14:04:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-27</time>
+</a>
         </div>
-        
-        
-    </div>
-</aside>
-
-
-
+    	 
   
-  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/03/27/数据库-C3P0简单使用/">[数据库]C3P0简单使用</a>
+    </h1>
   
 
+        <div class="article-info info-on-right">
+          
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">数据库</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">c3p0</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">JavaWeb</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+          
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+  
+    </div></section>
   
 
-  
-
-  
-  <div id="gitment-ctn"></div> 
-<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
-<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
-<script>
-var gitment = new Gitment({
-  id: "http://www.wdw87.club/2019/03/26/ThinkingInJava-多态/",
-  owner: 'wdw87',
-  repo: 'wdw87Blog.github.io',
-  oauth: {
-    client_id: 'c87a83a3997be8ef72db',
-    client_secret: 'd8569d5bb2a0f5456ae0cfcb9a4122a41ad04779',
-  },
-})
-gitment.render('gitment-ctn')
-</script>
-  
+    
 
 
           </div>
@@ -401,9 +268,9 @@ gitment.render('gitment-ctn')
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,

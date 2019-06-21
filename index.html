@@ -55,9 +55,7 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/tags/随笔/">随笔</a></li>
-	        
-				<li><a href="/tags/数据结构与算法/">数据结构与算法</a></li>
+				<li><a href="/archives">文章</a></li>
 	        
 			</ul>
 		</nav>
@@ -109,8 +107,6 @@
 			
 				
 			
-				
-			
 			
 			
 			<nav class="header-nav">
@@ -122,14 +118,12 @@
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 70%">
+				<ul style="width: 50%">
 				
 				
-					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
+					<li style="width: 50%"><a href="/">主页</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/tags/随笔/">随笔</a></li>
-		        
-					<li style="width: 33.333333333333336%"><a href="/tags/数据结构与算法/">数据结构与算法</a></li>
+					<li style="width: 50%"><a href="/archives">文章</a></li>
 		        
 				</ul>
 			</nav>
@@ -145,6 +139,362 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-回溯算法-经典的八皇后问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/11/回溯算法-经典的八皇后问题/">[回溯算法]经典的八皇后问题</a>
+    </h1>
+  
+
+        
+        <a href="/2019/04/11/回溯算法-经典的八皇后问题/" class="archive-article-date">
+  	<time datetime="2019-04-11T12:46:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-11</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="回溯算法-以八皇后问题和括号生成问题为例"><a href="#回溯算法-以八皇后问题和括号生成问题为例" class="headerlink" title="[回溯算法]以八皇后问题和括号生成问题为例"></a>[回溯算法]以八皇后问题和括号生成问题为例</h2><blockquote>
+<p>回溯算法的本质是一种枚举，它从解决问题的所有可能选项里系统的选出一个可执行的解决方案</p>
+</blockquote>
+<h4 id="1-回溯法适合解决什么问题？"><a href="#1-回溯法适合解决什么问题？" class="headerlink" title="1. 回溯法适合解决什么问题？"></a>1. 回溯法适合解决什么问题？</h4><p>回溯法非常适合解决由<strong>多个步骤组成</strong>的问题，并且每一个步骤有多个选项。当我们选择了其中一个选项是，就进入下一步，然后面临新的选项，重复选择，直至解决问题。一般采用递归。例如八皇后问题和LeetCode括号生成</p>
+<h4 id="2-回溯法的关键步骤"><a href="#2-回溯法的关键步骤" class="headerlink" title="2. 回溯法的关键步骤"></a>2. 回溯法的关键步骤</h4><ul>
+<li>选择：构建算法的第一步，第一步选择往往由有限个选择开始，一般由多个if或for循环实现</li>
+<li>条件：对于每一步选择，必须满足特定条件，否则回溯</li>
+<li>结束：当满足特定条件时，得出一个正确结果，把解存储下来或者打印出来。有时还需要构建一个数据结构，把解存储起来，这个数据结构必须是全局的，作为参数之一传递给递归函数</li>
+</ul>
+<p><strong>注意：上述三个步骤在实现时，有时实现顺序与上述不同，有时选择和条件会混在一起</strong></p>
+        
+          <a class="article-more-a" href="/2019/04/11/回溯算法-经典的八皇后问题/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">数据结构与算法</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">回溯法</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/04/11/回溯算法-经典的八皇后问题/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-设计模式-Observer观察者模式" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/03/设计模式-Observer观察者模式/">[设计模式]Observer观察者模式</a>
+    </h1>
+  
+
+        
+        <a href="/2019/04/03/设计模式-Observer观察者模式/" class="archive-article-date">
+  	<time datetime="2019-04-03T15:13:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Observer-观察者模式"><a href="#Observer-观察者模式" class="headerlink" title="Observer 观察者模式"></a>Observer 观察者模式</h2><blockquote>
+<p>观察者模式定义了对象之间一对多依赖，当一个对象改变状态时，它所有的依赖者都会受到通知并且更新</p>
+</blockquote>
+<blockquote>
+<p><strong>简单地说：你订阅公众号，公众号为主题，你是观察者，公众号有了新动态你立马收到通知，取消订阅后就不会收到通知了</strong></p>
+</blockquote>
+<p><strong>设计原则</strong></p>
+<ul>
+<li>找出程序中会变化的方面，然后将其和固定不变的方面分离</li>
+<li>针对接口编程，而不是针对实现编程</li>
+<li>多用组合，少用继承</li>
+</ul>
+<h3 id="1-示例结构图"><a href="#1-示例结构图" class="headerlink" title="1. 示例结构图"></a>1. 示例结构图</h3><p>以HeadFirst书中的气象站为例类图如下（代码在最后）：</p>
+<p><img src="http://www.plantuml.com/plantuml/png/dPB1JiCm38RFzLFak0bfBm27IHjSEUp0sKqzC4gJAd4gJQNlJe5cQZFQmswL_y__xyRU1q4liJR0LiYVKPCwScWCNfuDrMIbWzPnfQg_ucOB_GHzBGFvblm8nQP2eOmvnVAJzE1J_3AUtZaCMchTf0_bjezNfdOjhH7M2PylLsAezm1ZqjFNRlT6A1_aZoYe864_mY5wJrOEpbOix6mO_tO6lJXF6eFyfvq4XOEmJfqAvW-scfAZULPEB2I2DXY2Mehfe7XeOcbOg_dor4J85ZPQPkDq2mrB0ODHSheT-mwpqMkopjnb_Q0oDZki5VBsm0heOK-sYhNv1W00"></p>
+        
+          <a class="article-more-a" href="/2019/04/03/设计模式-Observer观察者模式/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">设计模式</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/04/03/设计模式-Observer观察者模式/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-C3P0-0-9-5-4与Mysql8-0-15版本连接的若干问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/03/27/C3P0-0-9-5-4与Mysql8-0-15版本连接的若干问题/">C3P0-0.9.5.4与Mysql8.0.15版本连接的若干问题</a>
+    </h1>
+  
+
+        
+        <a href="/2019/03/27/C3P0-0-9-5-4与Mysql8-0-15版本连接的若干问题/" class="archive-article-date">
+  	<time datetime="2019-03-27T14:07:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="C3P0-0-9-5-4与Mysql8-0-15版本连接的若干问题"><a href="#C3P0-0-9-5-4与Mysql8-0-15版本连接的若干问题" class="headerlink" title="C3P0-0.9.5.4与Mysql8.0.15版本连接的若干问题"></a>C3P0-0.9.5.4与Mysql8.0.15版本连接的若干问题</h2><h4 id="异常："><a href="#异常：" class="headerlink" title="异常："></a>异常：</h4><blockquote>
+<p>java.lang.NoClassDefFoundError: <strong>com</strong>/mchange/v2/<strong>ser</strong>/Indirector</p>
+</blockquote>
+<p>c3p0-0.9.2版本后需再导入数据库连接池的辅助包：mchange-commons-java-0.2.3.4.jar</p>
+<p>c3p0最新版本下载地址：&lt;<a href="https://sourceforge.net/projects/c3p0/" target="_blank" rel="noopener">https://sourceforge.net/projects/c3p0/</a></p>
+        
+          <a class="article-more-a" href="/2019/03/27/C3P0-0-9-5-4与Mysql8-0-15版本连接的若干问题/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">数据库</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">c3p0</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mysql</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/03/27/C3P0-0-9-5-4与Mysql8-0-15版本连接的若干问题/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-数据库-C3P0简单使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/03/27/数据库-C3P0简单使用/">[数据库]C3P0简单使用</a>
+    </h1>
+  
+
+        
+        <a href="/2019/03/27/数据库-C3P0简单使用/" class="archive-article-date">
+  	<time datetime="2019-03-27T14:04:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="C3P0的简单实用"><a href="#C3P0的简单实用" class="headerlink" title="C3P0的简单实用"></a>C3P0的简单实用</h2><p>测试环境：</p>
+<ul>
+<li>c3p0-0.9.5.4</li>
+<li>mysql-connector-java-8.0.15</li>
+<li>c3p0-0.9.2版本后需导入数据库连接池的辅助包：mchange-commons-java-0.2.3.4.jar</li>
+</ul>
+<p>c3p0最新版本下载地址：<a href="https://sourceforge.net/projects/c3p0/" target="_blank" rel="noopener">https://sourceforge.net/projects/c3p0/</a></p>
+        
+          <a class="article-more-a" href="/2019/03/27/数据库-C3P0简单使用/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">数据库</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">c3p0</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">JavaWeb</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/03/27/数据库-C3P0简单使用/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-ThinkingInJava-多态" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -375,6 +725,17 @@
 	</div>
 
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/数据结构与算法//" class="article-tag-list-link color3">数据结构与算法</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
         <p class="article-more-link">
@@ -587,11 +948,35 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color4">数据库</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">c3p0</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">数据结构与算法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">回溯法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">JavaWeb</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
               </li>
             
             <div class="clearfix"></div>
