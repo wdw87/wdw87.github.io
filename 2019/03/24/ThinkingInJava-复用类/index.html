@@ -146,7 +146,6 @@
             <article id="post-ThinkingInJava-复用类" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
-    
       <header class="article-header">
         
   
@@ -340,6 +339,27 @@
       
       <div class="clearfix"></div>
     </div>
+    
+      <div id="gitalk-container" style="padding: 0px 30px 0px 30px;"></div> 
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+
+if(true){
+	var gitalk = new Gitalk({
+  	clientID: 'b02634917b2780695129',
+  	clientSecret: '21085839198aa1fb0f18df2a3cf498239e6192c4',
+  	repo: 'BlogComment',
+  	owner: 'wdw87',
+  	admin: ['wdw87'],
+  	id: 'Sun Mar 24 2019 11:34:56 GMT+0800',
+  	distractionFreeMode: 'true'
+})
+gitalk.render('gitalk-container') 
+}
+</script>
+      
   </div>
 </article>
 
@@ -387,27 +407,7 @@
   
 
   
-  
-    <div id="gitalk-container" style="padding: 0px 30px 0px 30px;"></div> 
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-<script type="text/javascript">
-
-if(true){
-	var gitalk = new Gitalk({
-  	clientID: 'b02634917b2780695129',
-  	clientSecret: '21085839198aa1fb0f18df2a3cf498239e6192c4',
-  	repo: 'BlogComment',
-  	owner: 'wdw87',
-  	admin: ['wdw87'],
-  	id: 'Sun Mar 24 2019 11:34:56 GMT+0800',
-  	distractionFreeMode: 'true'
-})
-gitalk.render('gitalk-container') 
-}
-</script>
-    
   
 
   
@@ -523,10 +523,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Thinking in Java</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">多线程</a>
               </li>
              
@@ -536,6 +532,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">回溯法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Thinking in Java</a>
               </li>
              
               <li class="article-tag-list-item">
