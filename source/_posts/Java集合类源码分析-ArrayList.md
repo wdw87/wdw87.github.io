@@ -20,6 +20,8 @@ Arraylist底层数据结构为数组
 
 Java语言的关键字，变量修饰符，如果用**transient**声明一个实例变量，当对象存储时，它的值不需要维持。换句话来说就是，用**transient**关键字标记的成员变量不参与序列化过程。
 
+<!--more-->
+
 ## 2、继承结构
 
 <img src="C:/Users/Wudw/OneDrive/Java/%E6%BA%90%E7%A0%81%E7%B3%BB%E5%88%97/ArrayList/extern.jpg">
