@@ -24,7 +24,7 @@ Java语言的关键字，变量修饰符，如果用**transient**声明一个实
 
 ## 2、继承结构
 
-<img src="C:/Users/Wudw/OneDrive/Java/%E6%BA%90%E7%A0%81%E7%B3%BB%E5%88%97/ArrayList/extern.jpg">
+<img src="/extern.jpg">
 
 可以看出Arraylist继承自AbstractList接口，并实现了List<E>, RandomAccess, Cloneable, java.io.Serializable接口
 
@@ -106,7 +106,7 @@ List<Integer> lists = new ArrayList<Integer>();
 
 ## 5、常用方法
 
-<img src="C:/Users/Wudw/OneDrive/Java/%E6%BA%90%E7%A0%81%E7%B3%BB%E5%88%97/ArrayList/methods.jpg">
+<img src="/methods.jpg">
 
 ### 5.1 add方法
 
