@@ -16,12 +16,12 @@
 <meta property="og:site_name" content="wdw87的博客">
 <meta property="og:description" content="Java集合类源码分析–LinkedList1、数据结构LinkedList底层数据结构为双向链表 1234567891011private static class Node&amp;lt;E&amp;gt; &amp;#123;    E item;    Node&amp;lt;E&amp;gt; next;    Node&amp;lt;E&amp;gt; prev;    Node(Node&amp;lt;E&amp;gt; prev, E element,">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="c:/Users/Wudw/OneDrive/Java/%E6%BA%90%E7%A0%81%E7%B3%BB%E5%88%97/LinkedList/extend.jpg">
-<meta property="og:updated_time" content="2019-09-22T12:35:29.786Z">
+<meta property="og:image" content="http://www.wdw87.club/extend.jpg">
+<meta property="og:updated_time" content="2019-09-23T02:54:44.578Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java集合类源码分析--LinkedList">
 <meta name="twitter:description" content="Java集合类源码分析–LinkedList1、数据结构LinkedList底层数据结构为双向链表 1234567891011private static class Node&amp;lt;E&amp;gt; &amp;#123;    E item;    Node&amp;lt;E&amp;gt; next;    Node&amp;lt;E&amp;gt; prev;    Node(Node&amp;lt;E&amp;gt; prev, E element,">
-<meta name="twitter:image" content="c:/Users/Wudw/OneDrive/Java/%E6%BA%90%E7%A0%81%E7%B3%BB%E5%88%97/LinkedList/extend.jpg">
+<meta name="twitter:image" content="http://www.wdw87.club/extend.jpg">
   
     <link rel="alternative" href="/atom.xml" title="wdw87的博客" type="application/atom+xml">
   
@@ -168,7 +168,7 @@
         <h1 id="Java集合类源码分析–LinkedList"><a href="#Java集合类源码分析–LinkedList" class="headerlink" title="Java集合类源码分析–LinkedList"></a>Java集合类源码分析–LinkedList</h1><h2 id="1、数据结构"><a href="#1、数据结构" class="headerlink" title="1、数据结构"></a>1、数据结构</h2><p>LinkedList底层数据结构为双向链表</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Node</span>&lt;<span class="title">E</span>&gt; </span>&#123;</span><br><span class="line">    E item;</span><br><span class="line">    Node&lt;E&gt; next;</span><br><span class="line">    Node&lt;E&gt; prev;</span><br><span class="line"></span><br><span class="line">    Node(Node&lt;E&gt; prev, E element, Node&lt;E&gt; next) &#123;</span><br><span class="line">        <span class="keyword">this</span>.item = element;</span><br><span class="line">        <span class="keyword">this</span>.next = next;</span><br><span class="line">        <span class="keyword">this</span>.prev = prev;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<h2 id="2、继承结构"><a href="#2、继承结构" class="headerlink" title="2、继承结构"></a>2、继承结构</h2><p><img src="C:/Users/Wudw/OneDrive/Java/%E6%BA%90%E7%A0%81%E7%B3%BB%E5%88%97/LinkedList/extend.jpg"></p>
+<h2 id="2、继承结构"><a href="#2、继承结构" class="headerlink" title="2、继承结构"></a>2、继承结构</h2><p><img src="/extend.jpg"></p>
 <ul>
 <li>实现了Deque 可以当作队列、双端队列使用</li>
 <li>实现了Cloneable接口，即覆盖了函数clone()，能克隆。</li>
@@ -477,15 +477,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">freemarker</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">数据结构与算法</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">回溯法</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Thinking in Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">freemarker</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -497,15 +501,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Thinking in Java</a>
+                <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">快乐就完事了</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">设计模式</a>
               </li>
             
             <div class="clearfix"></div>
