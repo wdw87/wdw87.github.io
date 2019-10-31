@@ -30,7 +30,7 @@ LinkedList底层数据结构为双向链表
 
 ## 2、继承结构
 
-<img src="/extend.jpg">
+<img src="extend.JPG">
 
 - 实现了Deque 可以当作队列、双端队列使用
 - 实现了Cloneable接口，即覆盖了函数clone()，能克隆。
